@@ -46,6 +46,12 @@ function myFunction() {
         document.getElementById('a-tag2').style.color = 'black';
         document.getElementById('a-tag2').style.transition = '0.3s ease-in-out';
 
+        document.getElementById('h1-tag-for-mobile-nav1').style.color = 'black';
+        document.getElementById('h1-tag-for-mobile-nav1').style.transition = '0.3s ease-in-out';
+
+        document.getElementById('a-tag-for-mobile-nav1').style.color = 'black';
+        document.getElementById('a-tag-for-mobile-nav1').style.transition = '0.3s ease-in-out';
+
         for (let i = 0; i < document.getElementsByClassName('a-tags2').length; i++) {
 
             document.getElementsByClassName('a-tags2')[i].style.color = 'black';
@@ -58,6 +64,12 @@ function myFunction() {
 
         document.getElementById('a-tag2').style.color = 'white';
         document.getElementById('a-tag2').style.transition = '0.3s ease-in-out';
+
+        document.getElementById('h1-tag-for-mobile-nav1').style.color = 'white';
+        document.getElementById('h1-tag-for-mobile-nav1').style.transition = '0.3s ease-in-out';
+
+        document.getElementById('a-tag-for-mobile-nav1').style.color = 'white';
+        document.getElementById('a-tag-for-mobile-nav1').style.transition = '0.3s ease-in-out';
 
         for (let i = 0; i < document.getElementsByClassName('a-tags2').length; i++) {
 
@@ -251,7 +263,7 @@ function myFunction() {
 
     };
 
-    if (document.body.scrollTop > 4975 || document.documentElement.scrollTop > 4975) {
+    if (document.body.scrollTop > 4855 || document.documentElement.scrollTop > 4855) {
 
         document.getElementById('new-div7').style.opacity = '1';
         document.getElementById('new-div7').style.transition = '0.5s ease-in-out';
@@ -266,3 +278,71 @@ function myFunction() {
 
 
 };
+
+
+
+
+function menuBtn1() {
+
+        document.body.style.overflowY = 'hidden';
+
+        document.getElementById('menu-div1').style.display = 'block';
+        // document.getElementById('menu-div2').style.display = "flex";
+        document.getElementById('menu-div1').style.right = "-99vw";
+        document.getElementById('div-for-blur').style.display = 'block';
+
+        setTimeout(() => {
+
+            document.getElementById('menu-div1').style.right = "0";
+
+        }, 1);
+
+        setTimeout(() => {
+
+            document.getElementById('menu-div2').style.display = "flex";
+
+        }, 500);
+
+}
+
+function closeNav() {
+
+    // document.getElementById('menu-div1').style.display = 'none';
+    document.body.style.overflowY = 'scroll';
+    document.getElementById('div-for-blur').style.display = 'none';
+
+    document.getElementById('menu-div1').style.right = "-99vw";
+
+    setTimeout(() => {
+
+        document.getElementById('menu-div1').style.display = "none";
+
+    }, 400);
+
+    setTimeout(() => {
+
+        document.getElementById('menu-div2').style.display = "none";
+
+    }, 10);
+
+}
+
+document.getElementById('div-for-blur').addEventListener('click', () => {
+
+    document.getElementById('menu-div1').style.right = "-99vw";
+    document.body.style.overflowY = 'scroll';
+    document.getElementById('div-for-blur').style.display = 'none';
+
+    setTimeout(() => {
+
+        document.getElementById('menu-div2').style.display = "none";
+
+    }, 10);
+
+    setTimeout(() => {
+
+        document.getElementById('menu-div1').style.display = "none";
+
+    }, 400, false);
+
+})
